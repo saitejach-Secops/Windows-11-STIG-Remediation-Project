@@ -13,7 +13,7 @@
 
 ## Why This Matters
 
-Every process that starts generates Event ID 4688 when this is enabled. SOC analysts use this to reconstruct attack kill chains — Word spawning PowerShell, PowerShell spawning cmd, cmd running Mimikatz. Without this, the entire process chain is invisible.
+Every process that starts generates Event ID 4688 when this is enabled. SOC analysts use this to reconstruct attack kill chains - Word spawning PowerShell, PowerShell spawning cmd, cmd running Mimikatz. Without this, the entire process chain is invisible.
 
 ## Tenable - Before Fix (Failed)
 
