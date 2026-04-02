@@ -9,15 +9,15 @@
 
 | STIG ID | Title | MITRE ATT&CK |
 |---------|-------|--------------|
-| WN11-CC-000326 | PowerShell Script Block Logging must be enabled | T1059.001 — Command and Scripting: PowerShell |
-| WN11-CC-000327 | PowerShell Transcription must be enabled | T1059.001 — Command and Scripting: PowerShell |
-| WN11-CC-000066 | Command line data must be included in process creation events | T1059.003 — Command and Scripting: Windows Command Shell |
+| WN11-CC-000326 | PowerShell Script Block Logging must be enabled | T1059.001 - Command and Scripting: PowerShell |
+| WN11-CC-000327 | PowerShell Transcription must be enabled | T1059.001 - Command and Scripting: PowerShell |
+| WN11-CC-000066 | Command line data must be included in process creation events | T1059.003 - Command and Scripting: Windows Command Shell |
 
 ## Why This Matters
 
 PowerShell is used in the majority of modern attacks. These 3 STIGs together give SOC analysts full visibility into PowerShell activity.
 
-- **Script block logging** decodes and records every PowerShell script — including obfuscated ones
+- **Script block logging** decodes and records every PowerShell script - including obfuscated ones
 - **Transcription logging** records the full session: every command typed and every output returned
 - **Command line logging** captures the full arguments of every process that starts
 
