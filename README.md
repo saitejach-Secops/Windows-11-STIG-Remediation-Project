@@ -16,7 +16,7 @@
 
 This project documents the end-to-end process of identifying, manually remediating, and automating fixes for 10 failed DISA Windows 11 STIG compliance checks on a Microsoft Azure VM.
 
-The 10 STIGs were selected based on direct relevance to SOC operations, threat hunting, and credential security. Each STIG maps to a real attack technique that SOC analysts encounter in production environments.
+The 10 STIGs were selected based on direct relevance to SOC operations, threat hunting, and credential security. Each STIG maps to a real attack technique that SOC analysts experience in production environments.
 
 For each STIG the following process was followed:
 
@@ -47,7 +47,8 @@ For each STIG the following process was followed:
 
 Initial Tenable Nessus compliance scan before any remediation was performed. This establishes the starting state of the system.
 
-> Screenshot: `evidence/baseline-scan.png`
+> Screenshot: <img width="1541" height="459" alt="Screenshot 2026-03-24 131821" src="https://github.com/user-attachments/assets/a1c15e75-9ed7-41af-94ac-7241cb4067db" />
+
 
 ---
 
