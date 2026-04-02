@@ -14,9 +14,9 @@
     - System      : 32768 KB
 
 .NOTES
-  Author          : Your Name
-  LinkedIn        : https://linkedin.com/in/yourprofile
-  GitHub          : https://github.com/yourgithub
+  Author          : Sai Teja Ch
+  LinkedIn        : https://linkedin.com/in/csai
+  GitHub          : https://github.com/saitejach-Secops
   Date Created    : 03-28-2026
   Last Modified   : 03-28-2026
   CVEs            : N/A
