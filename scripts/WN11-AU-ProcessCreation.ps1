@@ -17,8 +17,8 @@
 
 .NOTES
   Author          : Your Name
-  LinkedIn        : https://linkedin.com/in/yourprofile
-  GitHub          : https://github.com/yourgithub
+  LinkedIn        : https://linkedin.com/in/csai
+  GitHub          : https://github.com/saitejach-Secops
   Date Created    : 03-28-2026
   Last Modified   : 03-28-2026
   CVEs            : N/A
@@ -27,7 +27,7 @@
 
 .TESTED ON
   Date(s) Tested  : 03-28-2026
-  Tested By       : Your Name
+  Tested By       : sai teja ch
   Systems Tested  : Windows 11 (Version 10.0.22621)
 
 .USAGE
