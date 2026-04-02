@@ -9,11 +9,11 @@
 
 | STIG ID | Title | MITRE ATT&CK |
 |---------|-------|--------------|
-| WN11-CC-000315 | Windows Installer Always install with elevated privileges must be disabled | T1548.002 — Abuse Elevation Control Mechanism |
+| WN11-CC-000315 | Windows Installer Always install with elevated privileges must be disabled | T1548.002 - Abuse Elevation Control Mechanism |
 
 ## Why This Matters
 
-When `AlwaysInstallElevated` is enabled, any user can run an MSI installer as SYSTEM. Attackers create malicious MSI files that add admin accounts or install backdoors. Both HKLM and HKCU must be set to `0` — if either is missing or `1`, the STIG fails.
+When `AlwaysInstallElevated` is enabled, any user can run an MSI installer as SYSTEM. Attackers create malicious MSI files that add admin accounts or install backdoors. Both HKLM and HKCU must be set to `0` - if either is missing or `1`, the STIG fails.
 
 ## Registry Paths
 
