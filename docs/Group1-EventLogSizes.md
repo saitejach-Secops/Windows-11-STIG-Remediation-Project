@@ -1,4 +1,4 @@
-# Group 1 — Event Log Sizes
+# Group 1 - Event Log Sizes
 
 **STIGs:** WN11-AU-000500 · WN11-AU-000505 · WN11-AU-000510
 **Script:** [`WN11-AU-EventLog-Sizes.ps1`](../scripts/WN11-AU-EventLog-Sizes.ps1)
@@ -39,17 +39,17 @@ Create `EventLog` key with subkeys `Application`, `Security`, `System`. Inside e
 
 ![Right-click MaxSize to modify](../evidence/g1-registry-modify-maxsize.png)
 
-Set decimal values — Application: 32768, Security: 1024000, System: 32768:
+Set decimal values - Application: 32768, Security: 1024000, System: 32768:
 
 ![Setting MaxSize to 32768 decimal](../evidence/g1-registry-set-32768.png)
 
-## Tenable — Before Fix (Failed)
+## Tenable - Before Fix (Failed)
 
 ![WN11-AU-000500 and 000505 Failed](../evidence/g1-tenable-000500-000505-failed.png)
 
 ![WN11-AU-000510 Failed](../evidence/g1-tenable-000510-failed.png)
 
-## Tenable — After Manual Fix (Passed)
+## Tenable - After Manual Fix (Passed)
 
 ![WN11-AU-000500 and 000505 Passed](../evidence/g1-tenable-000500-000505-passed.png)
 
@@ -69,7 +69,7 @@ gpupdate /force
 
 ![reg query verification — all 3 values confirmed](../evidence/g1-reg-query-verification.png)
 
-## Tenable — After PowerShell Fix (Passed)
+## Tenable - After PowerShell Fix (Passed)
 
 ![WN11-AU-000500 and 000505 Passed after PS script](../evidence/g1-tenable-000500-000505-passed-ps.png)
 
