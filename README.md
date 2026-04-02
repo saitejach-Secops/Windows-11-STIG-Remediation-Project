@@ -31,24 +31,12 @@ All 10 STIGs were selected based on direct relevance to SOC operations, threat h
 ## Remediation Workflow
 
 Every STIG in this project went through the same 6-step process:
-
-```mermaid
-flowchart LR
-    A((Baseline Scan)) --> B{Identify Failed STIGs}
-    B --> C[Manual Fix via Registry / secpol]
-    C --> D((Rescan — Confirm Pass))
-    D --> E[Revert Fix — Confirm Fail]
-    E --> F[PowerShell Automation Script]
-    F --> G((Final Rescan — Confirm Pass))
-    G --> H((Document + Evidence))
-```
-
-1. **Baseline scan** — Identified as Failed in Tenable Nessus
-2. **Manual fix** — Applied via Registry Editor or Local Security Policy
-3. **Rescan** — Verified as Passed
-4. **Revert** — Undid the fix, confirmed it fails again
-5. **Automate** — Applied the same fix using a PowerShell script
-6. **Final rescan** — Verified as Passed, captured before/after evidence
+1. **Baseline scan** - Identified as Failed in Tenable Nessus
+2. **Manual fix** - Applied via Registry Editor or Local Security Policy
+3. **Rescan** - Verified as Passed
+4. **Revert** - Undid the fix, confirmed it fails again
+5. **Automate** - Applied the same fix using a PowerShell script
+6. **Final rescan** - Verified as Passed, captured before/after evidence
 
 ---
 
@@ -97,7 +85,7 @@ Restart-Computer -Force
 
 ## Baseline Scan
 
-Initial Tenable Nessus scan before any remediation — **151 Failed** · 13 Warning · 100 Passed
+Initial Tenable Nessus scan before any remediation - **151 Failed** · 13 Warning · 100 Passed
 
 ![Baseline Scan](evidence/baseline-scan.png)
 
@@ -105,7 +93,7 @@ Initial Tenable Nessus scan before any remediation — **151 Failed** · 13 Warn
 
 ## Final Results
 
-After applying all 10 STIG remediations and running a final rescan — **10 items resolved**.
+After applying all 10 STIG remediations and running a final rescan - **10 items resolved**.
 
 Each STIG was individually verified with before/after evidence screenshots linked from each group's documentation page.
 
