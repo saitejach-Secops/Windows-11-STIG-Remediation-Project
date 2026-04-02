@@ -9,13 +9,13 @@
 
 | STIG ID | Title | MITRE ATT&CK |
 |---------|-------|--------------|
-| WN11-AU-000500 | Application event log size must be 32768 KB or greater | T1070.001 — Indicator Removal: Clear Windows Event Logs |
-| WN11-AU-000505 | Security event log size must be 1024000 KB or greater | T1070.001 — Indicator Removal: Clear Windows Event Logs |
-| WN11-AU-000510 | System event log size must be 32768 KB or greater | T1070.001 — Indicator Removal: Clear Windows Event Logs |
+| WN11-AU-000500 | Application event log size must be 32768 KB or greater | T1070.001 - Indicator Removal: Clear Windows Event Logs |
+| WN11-AU-000505 | Security event log size must be 1024000 KB or greater | T1070.001 - Indicator Removal: Clear Windows Event Logs |
+| WN11-AU-000510 | System event log size must be 32768 KB or greater | T1070.001 - Indicator Removal: Clear Windows Event Logs |
 
 ## Why This Matters
 
-All 3 STIGs address Windows event log retention. If log sizes are too small, they overwrite themselves quickly and SOC analysts lose evidence during incident response. The Security log is the most critical — it captures every login attempt, privilege use, and account change. The default 20 MB fills up in hours on a busy system. Attackers rely on small log sizes to naturally erase their tracks without actively clearing logs.
+All 3 STIGs address Windows event log retention. If log sizes are too small, they overwrite themselves quickly and SOC analysts lose evidence during incident response. The Security log is the most critical - it captures every login attempt, privilege use, and account change. The default 20 MB fills up in hours on a busy system. Attackers rely on small log sizes to naturally erase their tracks without actively clearing logs.
 
 ## Registry Paths
 
@@ -25,7 +25,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security   → MaxSize = 10240
 HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System      → MaxSize = 32768
 ```
 
-> These are the GPO registry paths that Tenable checks for compliance — not the direct event log configuration paths.
+> These are the GPO registry paths that Tenable checks for compliance - not the direct event log configuration paths.
 
 ## Manual Remediation
 
