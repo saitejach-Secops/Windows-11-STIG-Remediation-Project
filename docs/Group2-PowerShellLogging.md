@@ -1,4 +1,4 @@
-# Group 2 — PowerShell and Command Logging
+# Group 2 - PowerShell and Command Logging
 
 **STIGs:** WN11-CC-000326 · WN11-CC-000327 · WN11-CC-000066
 **Script:** [`WN11-CC-PowerShell-Logging.ps1`](../scripts/WN11-CC-PowerShell-Logging.ps1)
@@ -31,7 +31,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription       → Enab
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit    → ProcessCreationIncludeCmdLine_Enabled = 1
 ```
 
-## Tenable — Before Fix (Failed)
+## Tenable - Before Fix (Failed)
 
 ![WN11-CC-000326 Failed](../evidence/g2-tenable-000326-failed.png)
 
@@ -63,7 +63,7 @@ gpupdate /force
 
 ![PowerShell script — all 3 values set to 1](../evidence/g2-powershell-script-run.png)
 
-## Tenable — After Fix (Passed)
+## Tenable - After Fix (Passed)
 
 ![WN11-CC-000326 Passed](../evidence/g2-tenable-000326-passed.png)
 
