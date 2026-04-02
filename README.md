@@ -58,55 +58,68 @@ Each STIG in this project maps directly to a real attack technique:
 
 | STIG ID | MITRE Technique | Tactic |
 |---------|----------------|--------|
-| WN11-AU-000500 | T1070.001 — Indicator Removal: Clear Windows Event Logs | Defense Evasion |
-| WN11-AU-000505 | T1070.001 — Indicator Removal: Clear Windows Event Logs | Defense Evasion |
-| WN11-AU-000510 | T1070.001 — Indicator Removal: Clear Windows Event Logs | Defense Evasion |
-| WN11-CC-000326 | T1059.001 — Command and Scripting: PowerShell | Execution |
-| WN11-CC-000327 | T1059.001 — Command and Scripting: PowerShell | Execution |
-| WN11-CC-000066 | T1059.003 — Command and Scripting: Windows Command Shell | Execution |
-| WN11-CC-000038 | T1003.001 — OS Credential Dumping: LSASS Memory | Credential Access |
-| WN11-SO-000205 | T1557.001 — LLMNR/NBT-NS Poisoning and Relay | Credential Access |
-| WN11-AU-000050 | T1055 — Process Injection | Defense Evasion |
-| WN11-CC-000315 | T1548.002 — Abuse Elevation Control Mechanism | Privilege Escalation |
+| WN11-AU-000500 | T1070.001 - Indicator Removal: Clear Windows Event Logs | Defense Evasion |
+| WN11-AU-000505 | T1070.001 - Indicator Removal: Clear Windows Event Logs | Defense Evasion |
+| WN11-AU-000510 | T1070.001 - Indicator Removal: Clear Windows Event Logs | Defense Evasion |
+| WN11-CC-000326 | T1059.001 - Command and Scripting: PowerShell | Execution |
+| WN11-CC-000327 | T1059.001 - Command and Scripting: PowerShell | Execution |
+| WN11-CC-000066 | T1059.003 - Command and Scripting: Windows Command Shell | Execution |
+| WN11-CC-000038 | T1003.001 - OS Credential Dumping: LSASS Memory | Credential Access |
+| WN11-SO-000205 | T1557.001 - LLMNR/NBT-NS Poisoning and Relay | Credential Access |
+| WN11-AU-000050 | T1055 - Process Injection | Defense Evasion |
+| WN11-CC-000315 | T1548.002 - Abuse Elevation Control Mechanism | Privilege Escalation |
 
 ---
 
 ## STIGs Remediated
 
 ### Group 1 — Event Log Sizes
+**Script:** [WN11-AU-EventLog-Sizes.ps1](scripts/WN11-AU-EventLog-Sizes.ps1)
 
-| STIG ID | Title | Script |
-|---------|-------|--------|
-| WN11-AU-000500 | Application event log size must be 32768 KB or greater | [WN11-AU-EventLog-Sizes.ps1](scripts/WN11-AU-EventLog-Sizes.ps1) |
-| WN11-AU-000505 | Security event log size must be 1024000 KB or greater | [WN11-AU-EventLog-Sizes.ps1](scripts/WN11-AU-EventLog-Sizes.ps1) |
-| WN11-AU-000510 | System event log size must be 32768 KB or greater | [WN11-AU-EventLog-Sizes.ps1](scripts/WN11-AU-EventLog-Sizes.ps1) |
+| STIG ID | Title |
+|---------|-------|
+| WN11-AU-000500 | Application event log size must be 32768 KB or greater |
+| WN11-AU-000505 | Security event log size must be 1024000 KB or greater |
+| WN11-AU-000510 | System event log size must be 32768 KB or greater |
+
+---
 
 ### Group 2 — PowerShell and Command Logging
+**Script:** [WN11-CC-PowerShell-Logging.ps1](scripts/WN11-CC-PowerShell-Logging.ps1)
 
-| STIG ID | Title | Script |
-|---------|-------|--------|
-| WN11-CC-000326 | PowerShell Script Block Logging must be enabled | [WN11-CC-PowerShell-Logging.ps1](scripts/WN11-CC-PowerShell-Logging.ps1) |
-| WN11-CC-000327 | PowerShell Transcription must be enabled | [WN11-CC-PowerShell-Logging.ps1](scripts/WN11-CC-PowerShell-Logging.ps1) |
-| WN11-CC-000066 | Command line data must be included in process creation events | [WN11-CC-PowerShell-Logging.ps1](scripts/WN11-CC-PowerShell-Logging.ps1) |
+| STIG ID | Title |
+|---------|-------|
+| WN11-CC-000326 | PowerShell Script Block Logging must be enabled |
+| WN11-CC-000327 | PowerShell Transcription must be enabled |
+| WN11-CC-000066 | Command line data must be included in process creation events |
+
+---
 
 ### Group 3 — Credential Security
+**Script:** [WN11-CC-Credential-Security.ps1](scripts/WN11-CC-Credential-Security.ps1)
 
-| STIG ID | Title | Script |
-|---------|-------|--------|
-| WN11-CC-000038 | WDigest Authentication must be disabled | [WN11-CC-Credential-Security.ps1](scripts/WN11-CC-Credential-Security.ps1) |
-| WN11-SO-000205 | LanMan authentication level must be NTLMv2 only | [WN11-CC-Credential-Security.ps1](scripts/WN11-CC-Credential-Security.ps1) |
+| STIG ID | Title |
+|---------|-------|
+| WN11-CC-000038 | WDigest Authentication must be disabled |
+| WN11-SO-000205 | LanMan authentication level must be NTLMv2 only |
+
+---
 
 ### Group 4 — Process Auditing
+**Script:** [WN11-AU-ProcessCreation.ps1](scripts/WN11-AU-ProcessCreation.ps1)
 
-| STIG ID | Title | Script |
-|---------|-------|--------|
-| WN11-AU-000050 | Audit Detailed Tracking — Process Creation must be enabled | [WN11-AU-ProcessCreation.ps1](scripts/WN11-AU-ProcessCreation.ps1) |
+| STIG ID | Title |
+|---------|-------|
+| WN11-AU-000050 | Audit Detailed Tracking — Process Creation must be enabled |
+
+---
 
 ### Group 5 — Installer Privileges
+**Script:** [WN11-CC-InstallerElevated.ps1](scripts/WN11-CC-InstallerElevated.ps1)
 
-| STIG ID | Title | Script |
-|---------|-------|--------|
-| WN11-CC-000315 | Windows Installer Always install with elevated privileges must be disabled | [WN11-CC-InstallerElevated.ps1](scripts/WN11-CC-InstallerElevated.ps1) |
+| STIG ID | Title |
+|---------|-------|
+| WN11-CC-000315 | Windows Installer Always install with elevated privileges must be disabled |
 
 ---
 
