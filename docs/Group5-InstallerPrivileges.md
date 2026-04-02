@@ -1,4 +1,4 @@
-# Group 5 — Installer Privileges
+# Group 5 - Installer Privileges
 
 **STIG:** WN11-CC-000315
 **Script:** [`WN11-CC-InstallerElevated.ps1`](../scripts/WN11-CC-InstallerElevated.ps1)
@@ -22,7 +22,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer → AlwaysInstallElevated = 0
 HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer → AlwaysInstallElevated = 0
 ```
 
-## Tenable — Before Fix (Failed)
+## Tenable - Before Fix (Failed)
 
 ![WN11-CC-000315 Failed](../evidence/g5-tenable-000315-failed.png)
 
@@ -42,7 +42,7 @@ gpupdate /force
 
 ![Script — HKLM and HKCU both 0, Status: PASS](../evidence/g5-powershell-script-run.png)
 
-## Tenable — After Fix (Passed)
+## Tenable - After Fix (Passed)
 
 ![WN11-CC-000315 Passed](../evidence/g5-tenable-000315-passed.png)
 
