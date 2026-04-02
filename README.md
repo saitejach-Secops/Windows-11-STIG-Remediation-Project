@@ -73,7 +73,7 @@ Each STIG in this project maps directly to a real attack technique:
 
 ## STIGs Remediated
 
-### Group 1 — Event Log Sizes
+### Group 1 - Event Log Sizes
 **Script:** [WN11-AU-EventLog-Sizes.ps1](scripts/WN11-AU-EventLog-Sizes.ps1)
 
 | STIG ID | Title |
@@ -84,7 +84,7 @@ Each STIG in this project maps directly to a real attack technique:
 
 ---
 
-### Group 2 — PowerShell and Command Logging
+### Group 2 - PowerShell and Command Logging
 **Script:** [WN11-CC-PowerShell-Logging.ps1](scripts/WN11-CC-PowerShell-Logging.ps1)
 
 | STIG ID | Title |
@@ -95,7 +95,7 @@ Each STIG in this project maps directly to a real attack technique:
 
 ---
 
-### Group 3 — Credential Security
+### Group 3 - Credential Security
 **Script:** [WN11-CC-Credential-Security.ps1](scripts/WN11-CC-Credential-Security.ps1)
 
 | STIG ID | Title |
@@ -105,7 +105,7 @@ Each STIG in this project maps directly to a real attack technique:
 
 ---
 
-### Group 4 — Process Auditing
+### Group 4 - Process Auditing
 **Script:** [WN11-AU-ProcessCreation.ps1](scripts/WN11-AU-ProcessCreation.ps1)
 
 | STIG ID | Title |
@@ -114,7 +114,7 @@ Each STIG in this project maps directly to a real attack technique:
 
 ---
 
-### Group 5 — Installer Privileges
+### Group 5 - Installer Privileges
 **Script:** [WN11-CC-InstallerElevated.ps1](scripts/WN11-CC-InstallerElevated.ps1)
 
 | STIG ID | Title |
@@ -145,12 +145,7 @@ This fix uses the Group Policy registry path (`HKLM:\SOFTWARE\Policies\Microsoft
 2. Type `regedit` and press `Enter`
 3. Click `Yes` on the UAC (User Account Control) prompt to allow Registry Editor to open
 4. In the left panel of Registry Editor, expand the following path by clicking each folder:
-   - `HKEY_LOCAL_MACHINE`
-   - `SOFTWARE`
-   - `Policies`
-   - `Microsoft`
-   - `Windows`
-   - `EventLog`
+   - `HKEY_LOCAL_MACHINE` -> `SOFTWARE` -> `Policies` -> `Microsoft` >- `Windows` >- `EventLog`
 5. If the `EventLog` key does not exist, right click `Windows` → click `New` → click `Key` → type `EventLog` → press `Enter`
 6. Right click the `EventLog` key → click `New` → click `Key` → type `Application` → press `Enter`
 7. If the `Application` key already exists, click on it to select it
@@ -178,17 +173,6 @@ This fix uses the Group Policy registry path (`HKLM:\SOFTWARE\Policies\Microsoft
 5. Change value back to `20480`
 6. Click `OK`
 
-**PowerShell Remediation:**
-```powershell
-.\scripts\WN11-AU-EventLog-Sizes.ps1
-```
-
-**Evidence:**
-- Before: `evidence/WN11-AU-000500-failed.png`
-- After: `evidence/WN11-AU-000500-passed.png`
-
----
-
 ### WN11-AU-000505 — Security Event Log Size
 
 **STIG Requirement:** Security event log size must be configured to 1024000 KB or greater.
@@ -207,12 +191,7 @@ Uses the GPO path (`HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security`
 2. Type `regedit` and press `Enter`
 3. Click `Yes` on the UAC prompt
 4. In the left panel expand the following path:
-   - `HKEY_LOCAL_MACHINE`
-   - `SOFTWARE`
-   - `Policies`
-   - `Microsoft`
-   - `Windows`
-   - `EventLog`
+   - `HKEY_LOCAL_MACHINE` -> `SOFTWARE` -> `Policies` -> `Microsoft` -> `Windows` -> `EventLog`
 5. If the `EventLog` key does not exist, right click `Windows` → `New` → `Key` → type `EventLog` → press `Enter`
 6. Right click `EventLog` → `New` → `Key` → type `Security` → press `Enter`
 7. If `Security` already exists click on it to select it
@@ -234,14 +213,11 @@ Confirm output shows `MaxSize : 1024000`
 1. Navigate to `HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security`
 2. Double click `MaxSize` → Decimal → change to `20480` → OK
 
-**PowerShell Remediation:**
-```powershell
-.\scripts\WN11-AU-EventLog-Sizes.ps1
-```
-
 **Evidence:**
-- Before: `evidence/WN11-AU-000505-failed.png`
-- After: `evidence/WN11-AU-000505-passed.png`
+- Before: <img width="1542" height="225" alt="Screenshot 2026-03-28 083644" src="https://github.com/user-attachments/assets/d71370e6-06c5-4288-aa3b-f50cd0190968" />
+
+- After: <img width="1541" height="381" alt="Screenshot 2026-03-28 112450" src="https://github.com/user-attachments/assets/5b6cda09-8e9b-4e0c-96d1-45e297ff99ca" />
+
 
 ---
 
@@ -263,12 +239,7 @@ Uses the GPO path (`HKLM:\SOFTWARE\Policies\Microsoft\Windows\EventLog\System`) 
 2. Type `regedit` and press `Enter`
 3. Click `Yes` on the UAC prompt
 4. In the left panel expand:
-   - `HKEY_LOCAL_MACHINE`
-   - `SOFTWARE`
-   - `Policies`
-   - `Microsoft`
-   - `Windows`
-   - `EventLog`
+   - `HKEY_LOCAL_MACHINE` -> `SOFTWARE` -> `Policies` -> `Microsoft` -> `Windows` -> `EventLog`
 5. If `EventLog` does not exist, right click `Windows` → `New` → `Key` → type `EventLog` → press `Enter`
 6. Right click `EventLog` → `New` → `Key` → type `System` → press `Enter`
 7. If `System` already exists click on it to select it
@@ -290,15 +261,16 @@ Confirm output shows `MaxSize : 32768`
 1. Navigate to `HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System`
 2. Double click `MaxSize` → Decimal → change to `20480` → OK
 
+
+**Evidence:**
+- Before: <img width="1521" height="241" alt="Screenshot 2026-03-28 083703" src="https://github.com/user-attachments/assets/da8a33f0-e357-4c0b-b14e-1c11b327d3b9" />
+
+- After: <img width="1546" height="350" alt="Screenshot 2026-03-28 112504" src="https://github.com/user-attachments/assets/9eba4df1-34ed-45d9-bee1-39ff925973c6" />
+
 **PowerShell Remediation:**
 ```powershell
 .\scripts\WN11-AU-EventLog-Sizes.ps1
 ```
-
-**Evidence:**
-- Before: `evidence/WN11-AU-000510-failed.png`
-- After: `evidence/WN11-AU-000510-passed.png`
-
 ---
 
 ### WN11-CC-000326 — PowerShell Script Block Logging
