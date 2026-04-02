@@ -1,4 +1,4 @@
-# Group 3 — Credential Security
+# Group 3 - Credential Security
 
 **STIGs:** WN11-CC-000038 · WN11-SO-000205
 **Script:** [`WN11-CC-Credential-Security.ps1`](../scripts/WN11-CC-Credential-Security.ps1)
@@ -30,7 +30,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\Lsa        → LmCompatibilityLevel = 5
 | 3 | Send NTLMv2 only |
 | **5** | **Send NTLMv2, refuse LM and NTLM (STIG required)** |
 
-## Tenable — Before Fix (Failed)
+## Tenable - Before Fix (Failed)
 
 ![WN11-CC-000038 Failed](../evidence/g3-tenable-000038-failed.png)
 
@@ -53,7 +53,7 @@ gpupdate /force
 Restart-Computer -Force
 ```
 
-![Script code — UseLogonCredential=0, LmCompatibilityLevel=5](../evidence/g3-powershell-script-code.png)
+![Script code - UseLogonCredential=0, LmCompatibilityLevel=5](../evidence/g3-powershell-script-code.png)
 
 ![Script execution output](../evidence/g3-powershell-script-run.png)
 
