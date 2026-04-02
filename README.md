@@ -20,7 +20,7 @@ All 10 STIGs were selected based on direct relevance to SOC operations, threat h
 
 | Component | Details |
 |-----------|---------|
-| OS | Windows 11 (Build 10.0.26100.8037) |
+| OS | Windows 11 |
 | STIG Baseline | DISA Windows 11 STIG v2r2 |
 | Scan Tool | Tenable Nessus (cloud.tenable.com) |
 | VM Platform | Microsoft Azure |
@@ -46,11 +46,11 @@ Each row links to a detailed breakdown in the [`docs/`](docs/) folder covering t
 
 | Group | STIG ID(s) | Summary | MITRE ATT&CK | Docs |
 |-------|-----------|---------|---------------|------|
-| 1 | WN11-AU-000500 / -000505 / -000510 | Event log sizes must meet minimum thresholds | T1070.001 — Clear Event Logs | [PowerShell Logging]|[Event Log Sizes](docs/Group1-EventLogSizes.md)
-| 2 | WN11-CC-000326 / -000327 / -000066 | PowerShell script block, transcription, and command line logging | T1059.001 / T1059.003 — PowerShell & Cmd | [PowerShell Logging](docs/Group2-PowerShellLogging.md) |
-| 3 | WN11-CC-000038 / WN11-SO-000205 | Disable WDigest, enforce NTLMv2 only | T1003.001 / T1557.001 — Credential Theft | [Credential Security](docs/Group3-CredentialSecurity.md) |
-| 4 | WN11-AU-000050 | Audit process creation (Event ID 4688) | T1055 — Process Injection | [Process Auditing](docs/Group4-ProcessAuditing.md) |
-| 5 | WN11-CC-000315 | Disable AlwaysInstallElevated | T1548.002 — Elevation Abuse | [Installer Privileges](docs/Group5-InstallerPrivileges.md) |
+| 1 | WN11-AU-000500 / -000505 / -000510 | Event log sizes must meet minimum thresholds | T1070.001 - Clear Event Logs | [PowerShell Logging]|[Event Log Sizes](docs/Group1-EventLogSizes.md)
+| 2 | WN11-CC-000326 / -000327 / -000066 | PowerShell script block, transcription, and command line logging | T1059.001 / T1059.003 - PowerShell & Cmd | [PowerShell Logging](docs/Group2-PowerShellLogging.md) |
+| 3 | WN11-CC-000038 / WN11-SO-000205 | Disable WDigest, enforce NTLMv2 only | T1003.001 / T1557.001 - Credential Theft | [Credential Security](docs/Group3-CredentialSecurity.md) |
+| 4 | WN11-AU-000050 | Audit process creation (Event ID 4688) | T1055 - Process Injection | [Process Auditing](docs/Group4-ProcessAuditing.md) |
+| 5 | WN11-CC-000315 | Disable AlwaysInstallElevated | T1548.002 - Elevation Abuse | [Installer Privileges](docs/Group5-InstallerPrivileges.md) |
 
 ---
 
