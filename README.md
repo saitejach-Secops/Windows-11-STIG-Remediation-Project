@@ -2,7 +2,7 @@
 
 This repository documents how I systematically identified, remediated, and automated fixes for 10 failed DISA Windows 11 STIG compliance checks on a Microsoft Azure VM using Tenable Nessus.
 
-All 10 STIGs were selected based on direct relevance to SOC operations, threat hunting, and credential security — not random compliance checkboxes. Each one maps to a real attack technique that shows up in production environments.
+All 10 STIGs were selected based on direct relevance to SOC operations, threat hunting, and credential security - not random compliance checkboxes. Each one maps to a real attack technique that shows up in production environments.
 
 ## Table of Contents
 
@@ -58,7 +58,7 @@ Each row links to a detailed breakdown in the [`docs/`](docs/) folder covering t
 
 | Group | STIG ID(s) | Summary | MITRE ATT&CK | Docs |
 |-------|-----------|---------|---------------|------|
-| 1 | WN11-AU-000500 / -000505 / -000510 | Event log sizes must meet minimum thresholds | T1070.001 — Clear Event Logs | https://github.com/saitejach-Secops/Windows-11-STIG-Remediation-Project/blob/main/docs/Group%201%20-%20Event%20Log%20Sizes.md |
+| 1 | WN11-AU-000500 / -000505 / -000510 | Event log sizes must meet minimum thresholds | T1070.001 — Clear Event Logs ||
 | 2 | WN11-CC-000326 / -000327 / -000066 | PowerShell script block, transcription, and command line logging | T1059.001 / T1059.003 — PowerShell & Cmd | [PowerShell Logging](docs/Group2-PowerShellLogging.md) |
 | 3 | WN11-CC-000038 / WN11-SO-000205 | Disable WDigest, enforce NTLMv2 only | T1003.001 / T1557.001 — Credential Theft | [Credential Security](docs/Group3-CredentialSecurity.md) |
 | 4 | WN11-AU-000050 | Audit process creation (Event ID 4688) | T1055 — Process Injection | [Process Auditing](docs/Group4-ProcessAuditing.md) |
