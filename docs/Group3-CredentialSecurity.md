@@ -9,12 +9,12 @@
 
 | STIG ID | Title | MITRE ATT&CK |
 |---------|-------|--------------|
-| WN11-CC-000038 | WDigest Authentication must be disabled | T1003.001 — OS Credential Dumping: LSASS Memory |
-| WN11-SO-000205 | LanMan authentication level must be NTLMv2 only | T1557.001 — LLMNR/NBT-NS Poisoning and Relay |
+| WN11-CC-000038 | WDigest Authentication must be disabled | T1003.001 - OS Credential Dumping: LSASS Memory |
+| WN11-SO-000205 | LanMan authentication level must be NTLMv2 only | T1557.001 - LLMNR/NBT-NS Poisoning and Relay |
 
 ## Why This Matters
 
-- **WDigest** stores plaintext passwords in LSASS memory — disabling it means Mimikatz finds nothing useful
+- **WDigest** stores plaintext passwords in LSASS memory - disabling it means Mimikatz finds nothing useful
 - **Forcing NTLMv2 only** prevents relay attacks where an attacker replays captured authentication
 
 ## Registry Paths
