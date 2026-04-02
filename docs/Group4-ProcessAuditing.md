@@ -9,7 +9,7 @@
 
 | STIG ID | Title | MITRE ATT&CK |
 |---------|-------|--------------|
-| WN11-AU-000050 | Audit Detailed Tracking — Process Creation must be enabled | T1055 - Process Injection |
+| WN11-AU-000050 | Audit Detailed Tracking - Process Creation must be enabled | T1055 - Process Injection |
 
 ## Why This Matters
 
