@@ -105,10 +105,10 @@ Each STIG was individually verified with before/after evidence screenshots linke
 |---------|-----|
 | Script execution blocked | Run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process` |
 | gpupdate access denied | Make sure PowerShell is running as Administrator |
-| STIG still fails after fix | Run `gpupdate /force` and restart the VM — some changes need a full restart |
+| STIG still fails after fix | Run `gpupdate /force` and restart the VM - some changes need a full restart |
 | Registry key doesn't exist | Create it: right-click parent key → New → Key → name exactly as documented |
-| Tenable results not updating | Launch a fresh scan — previous results don't auto-refresh |
-| Scan finishes in 1 min with no results | Azure blocks ICMP by default — uncheck "Ping the remote host" in Tenable Host Discovery |
+| Tenable results not updating | Launch a fresh scan - previous results don't auto-refresh |
+| Scan finishes in 1 min with no results | Azure blocks ICMP by default - uncheck "Ping the remote host" in Tenable Host Discovery |
 
 ---
 
