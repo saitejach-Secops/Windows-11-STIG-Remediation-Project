@@ -57,7 +57,7 @@ Restart-Computer -Force
 
 ![Script execution output](../evidence/g3-powershell-script-run.png)
 
-## Tenable — After Fix (Passed)
+## Tenable - After Fix (Passed)
 
 ![WN11-CC-000038 Passed](../evidence/g3-tenable-000038-passed.png)
 
