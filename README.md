@@ -1,8 +1,8 @@
 # Windows 11 STIG Remediation Project
 
-**Author:** Your Name
-**LinkedIn:** https://linkedin.com/in/yourprofile
-**GitHub:** https://github.com/yourgithub
+**Author:** SAI TEJA CH
+**LinkedIn:** www.linkedin.com/in/csai
+**GitHub:** https://github.com/saitejach-Secops
 **Environment:** Windows 11 Azure VM — DISA STIG v2r2
 **Scan Tool:** Tenable Nessus (cloud.tenable.com)
 
