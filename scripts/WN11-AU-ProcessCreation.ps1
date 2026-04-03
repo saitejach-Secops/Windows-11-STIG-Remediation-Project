@@ -16,7 +16,7 @@
   incident response.
 
 .NOTES
-  Author          : Your Name
+  Author          : sai teja ch
   LinkedIn        : https://linkedin.com/in/csai
   GitHub          : https://github.com/saitejach-Secops
   Date Created    : 03-28-2026
