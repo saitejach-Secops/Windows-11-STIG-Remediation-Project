@@ -67,7 +67,7 @@ Each STIG was selected because it maps to a real attack technique - not picked r
 
 **Process Auditing (Group 4)** - Without Audit Process Creation enabled, you have zero visibility into what processes are spawning what. When malware executes it creates a chain Word spawns PowerShell, PowerShell spawns cmd, cmd runs Mimikatz. Every step generates Event ID 4688. Without this setting, the entire kill chain is invisible during incident response. MITRE ATT&CK: T1055.
 
-**Installer Privileges (Group 5)** - When AlwaysInstallElevated is enabled, any user can run an MSI installer as SYSTEM — the highest privilege level on Windows. Attackers create malicious MSI files that add admin accounts or install backdoors. Both the HKLM and HKCU paths must be set to 0. If even one is missing or set to 1, the privilege escalation path still exists and the STIG fails. MITRE ATT&CK: T1548.002.
+**Installer Privileges (Group 5)** - When AlwaysInstallElevated is enabled, any user can run an MSI installer as SYSTEM the highest privilege level on Windows. Attackers create malicious MSI files that add admin accounts or install backdoors. Both the HKLM and HKCU paths must be set to 0. If even one is missing or set to 1, the privilege escalation path still exists and the STIG fails. MITRE ATT&CK: T1548.002.
 
 ---
 
